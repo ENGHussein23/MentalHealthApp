@@ -193,8 +193,7 @@ class _HomePageState extends State<HomePage> {
               height: 25,
             ),
             Expanded(
-              child:
-              ClipRRect(
+              child: ClipRRect(
                 borderRadius: BorderRadius.only(topLeft:Radius.circular(25) ,topRight:Radius.circular(25)),
                 child: Container(
                   padding: EdgeInsets.only(bottom: 0,left: 25,right: 25,top: 25),
@@ -205,7 +204,8 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Exercises',style: TextStyle(
+                            Text('Exercises',
+                              style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold
                             ),),
