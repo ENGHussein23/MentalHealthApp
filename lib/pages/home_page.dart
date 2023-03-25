@@ -22,6 +22,10 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(icon: Icon(Icons.message), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.contact_mail), label: ''),
           ],
+          elevation: 15,
+          selectedItemColor: Colors.blue[800],
+          selectedFontSize: 15,
+          unselectedFontSize: 10,
         ),
         body: SafeArea(
             child: Column(
@@ -189,8 +193,11 @@ class _HomePageState extends State<HomePage> {
               height: 25,
             ),
             Expanded(
-              child: Container(
-                padding: EdgeInsets.all(25),
+              child:
+              ClipRRect(
+                borderRadius: BorderRadius.only(topLeft:Radius.circular(25) ,topRight:Radius.circular(25)),
+                child: Container(
+                  padding: EdgeInsets.only(bottom: 0,left: 25,right: 25,top: 25),
                   color: Colors.grey[200],
                   child: Center(
                     child: Column(
@@ -198,12 +205,12 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                          Text('Exercises',style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                          ),),
-                          Icon(Icons.more_horiz,)
-                        ],),
+                            Text('Exercises',style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold
+                            ),),
+                            Icon(Icons.more_horiz,)
+                          ],),
                         SizedBox(height:20 ,),
                         Expanded(child: ListView(
                           children: [
@@ -227,7 +234,7 @@ class _HomePageState extends State<HomePage> {
                         )),
                       ],
                     ),
-                  )),
+                  )),)
             ),
           ],
         )));
